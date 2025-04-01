@@ -149,38 +149,6 @@
             <p class="discord_text">Dołącz do naszego discorda</p>
         </div>
     </div>
-    <script>
-        document.querySelector('.go').addEventListener('click', () => {
-            // Get the uploaded image URL
-            const imageUrl = document.querySelector('.upload').getAttribute('selected');
-    
-            // Collect data from input fields
-            const data = {
-                name: document.getElementById('name').value,
-                surname: document.getElementById('surname').value,
-                nationality: document.getElementById('nationality').value,
-                familyName: document.getElementById('familyName').value,
-                fathersFamilyName: document.getElementById('fathersFamilyName').value,
-                mothersFamilyName: document.getElementById('mothersFamilyName').value,
-                birthPlace: document.getElementById('birthPlace').value,
-                countryOfBirth: document.getElementById('countryOfBirth').value,
-                adress1: document.getElementById('adress1').value,
-                adress2: document.getElementById('adress2').value,
-                city: document.getElementById('city').value,
-                sex: document.querySelector('.selected_text').textContent,
-                birthday: Array.from(document.querySelectorAll('.date_input'))
-                    .map(input => input.value)
-                    .join('.'),
-                image: imageUrl || '', // Save the image URL or an empty string if not uploaded
-            };
-    
-            // Save data to localStorage
-            localStorage.setItem('userData', JSON.stringify(data));
-    
-            // Redirect to card.html
-            window.location.href = 'card.html';
-        });
-    </script>
     <script src="assets/index.js"></script>
     <script src="assets/manifest.js"></script>
 </body>
