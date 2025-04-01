@@ -224,6 +224,27 @@
             </div>
         </div>
     </div>
+    <script>
+    // Retrieve data from localStorage
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData) {
+        // Populate the fields with the retrieved data
+        document.getElementById('name').textContent = userData.name || 'N/A';
+        document.getElementById('surname').textContent = userData.surname || 'N/A';
+        document.getElementById('nationality').textContent = userData.nationality || 'N/A';
+        document.getElementById('birthday').textContent = userData.birthday || 'N/A';
+        document.getElementById('familyName').textContent = userData.familyName || 'N/A';
+        document.getElementById('fathersFamilyName').textContent = userData.fathersFamilyName || 'N/A';
+        document.getElementById('mothersFamilyName').textContent = userData.mothersFamilyName || 'N/A';
+        document.getElementById('birthPlace').textContent = userData.birthPlace || 'N/A';
+        document.getElementById('countryOfBirth').textContent = userData.countryOfBirth || 'N/A';
+        document.getElementById('adress').textContent = `${userData.adress1}, ${userData.adress2}, ${userData.city}` || 'N/A';
+        document.getElementById('sex').textContent = userData.sex || 'N/A';
+    } else {
+        console.error('No user data found in localStorage.');
+    }
+</script>
     <script src="assets/bar.js"></script>
     <script src="assets/card.js?v=1.0"></script>
     <script src="assets/manifest.js"></script>
